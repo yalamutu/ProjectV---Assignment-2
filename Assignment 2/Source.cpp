@@ -40,5 +40,14 @@ int main(void)
     }
 
     inputFile.close();
+
+    // Debugging
+#ifdef _DEBUG
+    //printing out student information
+    cout << "Loaded Student Data:" << endl;
+    for (const auto& student : students) {
+        cout << "First Name: " << student.firstName << ", Last Name: " << student.lastName << endl;
+    }
+#endif
     return 0;
 }
